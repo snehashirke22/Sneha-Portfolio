@@ -1,0 +1,119 @@
+.projects-section {
+    text-align: center;
+    padding: 60px 20px;
+    color: #fff;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .project-card {
+    background-color: #101225;
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+    height: 400px;
+    box-shadow: 0 0 10px 4px rgba(77, 183, 247, 0.4); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+    
+  }
+  
+  .project-img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+  }
+  
+  .project-title {
+    font-size: 20px;
+    margin-bottom: 18px;
+    color: #4DB7F7;
+  }
+  
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  
+  .project-tag {
+    background: #ecf0f120;
+    color: #4DB7F7;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
+  
+  .project-desc {
+    height: 80px;
+    font-size: 14px;
+    color: #a1a1a1;
+    margin-bottom: 12px;
+  }
+  
+.project-footer {
+    border-top: 1px solid #444;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  .project-footer a {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  .project-footer a:hover {
+    background: #1f2035;
+  }
+  
+  .project-footer a:first-child {
+    border-right: 1px solid #444;
+  }
+
+  @media (max-width: 768px) {
+    .projects-section{
+      margin-top: 40%;
+      justify-content: center;
+      align-items: center;
+      margin-left: 25px;
+      width: 100%;
+    }
+    .projects-grid{
+        gap: 50px;
+    }
+    .project-card{
+        width: 350px;
+        height: 420px;
+    }
+    .project-tag{
+        font-size: 14px;
+    }
+    .project-desc{
+        font-size: 16px;
+    }
+    .project-footer a{
+        padding: 20px;
+    }
+  }

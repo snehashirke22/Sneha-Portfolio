@@ -1,0 +1,122 @@
+.experience-section {
+    text-align: center;
+    padding: 60px 20px;
+    color: #fff;
+}
+
+
+.experience-container {
+    position: relative;
+    padding-left: 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.glow-line {
+    position: absolute;
+    left: 35px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(#00f0ff, #b600ff, #00f0ff);
+    animation: scrollGlow 6s linear infinite;
+    box-shadow: 0 0 12px #00f0ff, 0 0 24px #b600ff;
+}
+
+@keyframes scrollGlow {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 400px;
+    }
+}
+
+.experience-card {
+    background: #101225;
+    border-radius: 12px;
+    padding: 24px;
+    width: 750px;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+}
+
+.exp-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #fff;
+    top: 10%;
+    transform: translate(-100%, 130%);
+
+}
+
+.company-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.exp-content h1 {
+    font-size: 23px;
+    margin: 0 0 5px;
+    color: #ffffff;
+}
+
+.company-location {
+    font-size: 15px;
+    color: #aaa;
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+
+.exp-content ul {
+    padding-left: 20px;
+    margin: 0 0 12px;
+    margin-top: 15px;
+}
+
+.exp-content li {
+    margin-bottom: 6px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.date {
+    font-size: 14px;
+    color: #4DB7F7;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .experience-section {
+        margin-top: 20%;
+        margin-left: 25px;
+        width: 100%;
+    }
+    .experience-container{
+        margin-left: 15px;
+    }
+    .company-row {
+        flex-direction: column;
+    }
+
+    .experience-card {
+        width: 320px;
+    }
+
+    .exp-content li {
+        font-size: 17px;
+    }
+    .date{
+        font-size: 15px;
+    }
+    .company-location{
+        font-size: 18px;
+    }
+}

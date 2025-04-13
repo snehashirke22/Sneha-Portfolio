@@ -1,0 +1,16 @@
+.footer-section{
+    margin-top: 5%;
+    background-color: #101225;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+.footer-section{
+    width: 100%;
+    margin-left: 35px;
+    margin-top: 60px;
+}
+}
