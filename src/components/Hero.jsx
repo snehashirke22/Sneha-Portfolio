@@ -26,7 +26,7 @@ const Hero = () => {
                     ⚡ Software Engineer at <span className="company">Accenture</span>
                 </p>
               
-                <a href="https://drive.google.com/file/d/1VstLd3gE1B4UozBHPEaciOgphRQszs8-/view?usp=drive_link" download className="download-btn"><IoMdDownload size={18} />
+                <a href="https://drive.google.com/file/d/1zUn_qaOxlv77CUyZdf90ToBVX5_3ZwXT/view?usp=drive_link" target="_blank" download className="download-btn"><IoMdDownload size={18} />
                     Download Resume
                 </a>
             </div>
