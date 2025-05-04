@@ -18,7 +18,7 @@ const Navbar = () => {
           alt="logo"
           className="navbar-logo"
         />
-        <span className="navbar-title">Sneha"s Portfolio</span>
+        <span className="navbar-title">Sneha's Portfolio</span>
       </div>
 
       <div className={`navbar-right ${isOpen ? "open" : ""}`}>
