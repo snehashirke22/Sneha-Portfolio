@@ -1,32 +1,6 @@
 import React from "react";
 import { MdSchool } from "react-icons/md";
-import mars from "../assets/mars.png";
-import jupiter from "../assets/jupiter.png";
-import mercury from "../assets/mercury.png"
-
-const educationData = [
-    {
-        planet: mars,
-        title: 'Secondary School Education',
-        institution: 'Saraswati Vidya Mandir',
-        location: 'Mumbai, Maharashtra',
-        year: '2009 - 2019',
-    },
-    {
-        planet: jupiter,
-        title: 'Higher Secondary School Education',
-        institution: 'Ramniranjan Jhunjhunwala College',
-        location: 'Mumbai, Maharashtra',
-        year: '2019 - 2021',
-    },
-    {
-        planet: mercury,
-        title: 'Bsc in Information Technology',
-        institution: 'Bhavans College',
-        location: 'Mumbai, Maharashtra',
-        year: '2021 - 2024',
-    },
-];
+import { educationData } from "../constants";
 
 const Education = () => {
     return (
@@ -47,8 +21,8 @@ const Education = () => {
                             <img src={edu.planet} alt={edu.title} className="w-[300px] h-[300px] rounded-full border-2 border-white shadow-[0_0_15px_4px_rgba(77,183,247,0.4)] relative z-10" />
                             <div className="absolute top-[95%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white z-20 p-2 bg-[rgba(51,57,56,0.744)] rounded-full text-[12px] w-[300px] h-[300px] flex items-center justify-center">
                                 <div className="p-5 mt-10">
-                                    <h3 className="text-[20px] text-white mb-1">{edu.title}</h3>
-                                    <p className="text-[18px] m-0 mb-1">{edu.institution}</p>
+                                    <p className="text-[20px] text-primary font-bold m-0 mb-1">{edu.institution}</p>
+                                    <h3 className="text-[16px] text-white mb-1 font-normal">{edu.title}</h3>
                                     <p className="text-[14px] text-[#dfdfe1] m-0">{edu.location}</p>
                                     <p className="text-[14px] text-[#dfdfe1] m-0">{edu.year}</p>
                                 </div>
