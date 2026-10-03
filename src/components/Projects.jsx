@@ -1,5 +1,5 @@
 import React from "react"
-import { projects } from "../components/ProjectData";
+import { projects } from "../constants";
 import { MdLaptopChromebook } from "react-icons/md";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
@@ -12,22 +12,29 @@ const Projects = () => {
                 <span>"Where ideas take flight in lines of code."</span>
             </div>
             <p className="text-[17.6px] mb-10 text-[#c1c1c1]">Projects I’ve built using different tools and technologies. 🛠️</p>
-            <div className="flex flex-wrap justify-center gap-[50px] md:gap-[30px] max-w-[1370px] mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto px-4 md:px-0">
                 {projects.map((project) => (
-                    <div className="bg-[#101225] rounded-xl p-5 w-[350px] md:w-[320px] h-[420px] md:h-[400px] shadow-[0_0_10px_4px_rgba(77,183,247,0.4)] transition-transform duration-300 hover:-translate-y-2 flex flex-col" key={project.id}>
-                        <img src={project.image} alt={project.title} className="w-full h-[180px] rounded-[10px] object-cover" />
-                        <h3 className="text-[20px] mb-[18px] text-primary font-bold mt-4">{project.title}</h3>
-                        <div className="flex flex-wrap gap-2 justify-center mb-3">
+                    <div className="bg-[#101225] rounded-[12px] p-6 shadow-[0_0_10px_4px_rgba(77,183,247,0.4)] transition-transform duration-300 hover:-translate-y-2 flex flex-col h-full" key={project.id}>
+                        
+                        <div className="w-full aspect-video overflow-hidden rounded-[10px] mb-5 bg-[#0a0c1b]">
+                            <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                        </div>
+                        
+                        <h3 className="text-xl text-primary font-bold mb-3">{project.title}</h3>
+                        
+                        <div className="flex flex-wrap gap-2 justify-center mb-4">
                             {project.stack.map((tech, index) => (
-                                <span key={index} className="bg-[#ecf0f120] text-primary py-1 px-2.5 rounded-[20px] text-[14px] md:text-[12px] font-medium">{tech}</span>
+                                <span key={index} className="bg-[#ecf0f120] text-primary py-1 px-3 rounded-full text-xs font-medium">{tech}</span>
                             ))}
                         </div>
-                        <p className="h-[80px] text-[16px] md:text-[14px] text-[#a1a1a1] mb-3 overflow-hidden text-ellipsis line-clamp-3">{project.description}</p>
-                        <div className="border-t border-[#444] mt-auto flex justify-between overflow-hidden rounded-b-xl -mx-5 -mb-5 h-[50px] md:h-auto">
-                            <a href={project.github} target="_blank" rel="noreferrer" className="flex-1 text-center py-3 md:py-3 px-[20px] md:px-0 text-white no-underline font-medium flex justify-center items-center gap-1.5 text-[14px] transition-colors duration-300 hover:bg-[#1f2035] border-r border-[#444]">
+                        
+                        <p className="text-sm text-[#a1a1a1] mb-6 flex-grow leading-relaxed">{project.description}</p>
+                        
+                        <div className="border-t border-[#444] mt-auto flex justify-between overflow-hidden rounded-b-xl -mx-6 -mb-6">
+                            <a href={project.github} target="_blank" rel="noreferrer" className="flex-1 text-center py-4 text-white no-underline font-medium flex justify-center items-center gap-2 text-sm transition-colors duration-300 hover:bg-[#1f2035] border-r border-[#444]">
                                 <FaGithub /> Github
                             </a>
-                            <a href={project.demo} target="_blank" rel="noreferrer" className="flex-1 text-center py-3 md:py-3 px-[20px] md:px-0 text-white no-underline font-medium flex justify-center items-center gap-1.5 text-[14px] transition-colors duration-300 hover:bg-[#1f2035]">
+                            <a href={project.demo} target="_blank" rel="noreferrer" className="flex-1 text-center py-4 text-white no-underline font-medium flex justify-center items-center gap-2 text-sm transition-colors duration-300 hover:bg-[#1f2035]">
                                 <FaExternalLinkAlt /> Live Demo
                             </a>
                         </div>

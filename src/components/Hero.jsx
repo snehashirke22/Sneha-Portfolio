@@ -6,8 +6,8 @@ import { IoCodeSlash } from "react-icons/io5";
 
 const Hero = () => {
     return (
-        <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-[100px] py-[80px] h-auto md:h-screen max-w-[1500px] mx-auto mt-[15%] md:mt-[10%] xl:mt-[4%] ml-[18%] md:ml-auto">
-            <div className="max-w-[800px] flex-wrap w-[410px] md:w-auto">
+        <section className="flex flex-col md:flex-row items-center justify-between gap-[50px] lg:gap-[120px] px-8 md:px-[50px] pt-[100px] md:pt-[120px] pb-[80px] h-auto md:min-h-screen max-w-[1500px] mx-auto ml-[18%] md:ml-auto">
+            <div className="w-full max-w-[700px] flex flex-col items-start">
                 <div className="inline-flex items-center gap-2 px-[14px] py-[6px] border border-primary bg-white/20 rounded-full text-white text-sm mb-4 font-medium shadow-[0_0_8px_var(--color-primary)] transition-all duration-300">
                     <IoCodeSlash className="text-white text-base" />
                     <span>Always Learning. Always Growing.</span>
@@ -20,15 +20,20 @@ const Hero = () => {
                 </p>
                 <p className="text-base md:text-xl text-[#c1c1c1] m-0">🚀 Currently specializing in Frontend (React / Next.js)        </p>
                 <p className="text-base md:text-xl text-[#c1c1c1] m-0">
-                    ⚡ Software Engineer at <span className="text-primary">Accenture</span>
+                    ⚡ Junior Software Engineer at <span className="text-primary">TapFin</span>
                 </p>
               
-                <a href="https://drive.google.com/file/d/1zUn_qaOxlv77CUyZdf90ToBVX5_3ZwXT/view?usp=drive_link" target="_blank" download className="mt-10 inline-flex px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white no-underline justify-center items-center rounded-[10px] font-medium text-lg gap-1.5 shadow-[0_0_15px_rgba(167,139,250,0.6)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_25px_rgba(192,132,252,0.8)]"><IoMdDownload size={18} />
+                <a href="https://drive.google.com/file/d/138PUKfv8J6VM0ju714AuUSNkFuJ9fHhd/view?usp=sharing" target="_blank" download className="mt-10 inline-flex px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white no-underline justify-center items-center rounded-[10px] font-medium text-lg gap-1.5 shadow-[0_0_15px_rgba(167,139,250,0.6)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_25px_rgba(192,132,252,0.8)]"><IoMdDownload size={18} />
                     Download Resume
                 </a>
             </div>
-            <div className="mt-[10%] md:mt-0">
-                <img src={heroImage} alt="Sneha" className="w-[420px] md:w-[600px] h-auto object-contain rounded-full drop-shadow-[0_0_40px_rgba(0,174,255,0.35)] mix-blend-lighten animate-[float_3s_ease-in-out_infinite]" />
+            <div className="mt-[15%] md:mt-0 relative group flex justify-center items-center w-[90vw] max-w-[380px] md:max-w-none md:w-[550px] aspect-square">
+                {/* Outer glowing animated ring */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary via-secondary to-[#b600ff] rounded-full animate-spin blur-[30px] opacity-50 group-hover:opacity-100 transition-opacity duration-500 [animation-duration:8s]"></div>
+                {/* Inner rotating gradient border */}
+                <div className="absolute inset-[-6px] bg-gradient-to-tr from-[#b600ff] via-primary to-secondary rounded-full animate-spin [animation-duration:10s] opacity-90 group-hover:scale-105 transition-transform duration-500"></div>
+                
+                <img src={heroImage} alt="Sneha" className="relative w-full h-full object-cover rounded-full animate-[float_4s_ease-in-out_infinite] z-10 transition-transform duration-500 group-hover:scale-[1.02]" />
             </div>
         </section>
     );
