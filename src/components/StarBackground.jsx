@@ -2,7 +2,6 @@ import React, { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
-import "../styles/StarBackground.css";
 
 const StarBackground = (props) => {
   const ref = useRef();
@@ -39,7 +38,7 @@ const StarBackground = (props) => {
 };
 
 const StarsCanvas = () => (
-  <div className="starbg">
+  <div className="fixed top-0 left-0 w-full h-full md:w-screen md:h-screen -z-10 overflow-hidden bg-bg-dark">
     <Canvas camera={{ position: [0, 0, 1] }}>
       <Suspense fallback={null}>
         <StarBackground />
